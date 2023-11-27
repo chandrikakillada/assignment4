@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title>{{title}}</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+  </head>
+  <body>
+    <div class="container">
+
+      <header>
+        <div class="header-content">
+          <h1>Killada Chandrika Venu</h1>
+          <p>Student ID: N01536668</p>
+        </div>
+      </header>
+      <nav class="nav">
+        <ul class="nav-list">
+
+          <li class="nav-list-item">
+            <a class="nav-list-link" href="/">
+              Home
+            </a>
+          </li>
+          <li class="nav-list-item">
+            <a class="nav-list-link" href="/allInvoices">View All Invoices</a>
+
+          </li>
+          <li class="nav-list-item">
+            <a class="nav-list-link" href="/addInvoice">Add Invoice</a>
+          </li>
+
+          <li class="nav-list-item">
+            <a class="nav-list-link" href="/updateInvoice">Update Invoice</a>
+          </li>
+
+          <li class="nav-list-item">
+            <a class="nav-list-link" href="/deleteInvoice">Delete Invoice</a>
+          </li>
+
+        </ul>
+      </nav>
+      <main class="content">
+        {{{body}}}
+
+      </main>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+/* styles.css */
+
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Main wrapper */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  /* background-color: #4CAF50; */
+  color: #333;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+/* Nav */
+nav {
+  background-color: #6e1010;
+  color: white;
+  padding: 20px;
+}
+
+.nav-list {
+  list-style-type: none;
+  font-size: 14px;
+  display: flex;
+}
+
+.nav-list-item {
+  margin-right: 20px;
+}
+
+.nav-list-link {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-list-link:hover {
+  text-decoration: underline;
+}
+
+/* Main content */
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Styles for the list */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Style for each list item */
+/* li {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+} */
+
+/* Strong tags styles */
+strong {
+  font-weight: bold;
+}
+
+/* Image styles */
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+/* Heading styles */
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Additional styles as needed */

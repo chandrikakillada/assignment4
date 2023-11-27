@@ -1,0 +1,47 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update Invoice form</title>
+  </head>
+
+  <style>
+
+    select{ font-family: inherit; } .update-invoice-form { max-width: 400px;
+    margin: 50px auto; padding: 20px; background-color: #fff; border: 1px solid
+    #ddd; border-radius: 5px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); } h2 {
+    text-align: center; color: #333; } label { display: block; margin-top: 10px;
+    font-weight: bold; } select, input { width: 100%; padding: 8px; margin-top:
+    5px; margin-bottom: 10px; box-sizing: border-box; } button {
+    background-color: #4caf50; color: #fff; padding: 10px 15px; border: none;
+    border-radius: 5px; cursor: pointer; } button:hover { background-color:
+    #45a049; }
+  </style>
+  <body>
+
+    <form action="/updateInvoice" method="post" class="update-invoice-form">
+      <h2>Update Invoice</h2>
+
+      <label for="invoiceID">Invoice ID:</label>
+      <input type="text" id="invoiceID" name="invoiceID" required />
+
+      <label for="newCustomerType">New Customer Type:</label>
+      <select id="newCustomerType" name="newCustomerType" required>
+        <option value="Normal">Normal</option>
+        <option value="Member">Member</option>
+      </select>
+
+      <label for="newUnitPrice">New Unit Price:</label>
+      <input
+        type="number"
+        step="0.01"
+        id="newUnitPrice"
+        name="newUnitPrice"
+        required
+      />
+
+      <button type="submit">Update Invoice</button>
+    </form>
+
+  </body>
+</html>

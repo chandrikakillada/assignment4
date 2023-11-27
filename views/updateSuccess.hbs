@@ -1,0 +1,26 @@
+<!-- update-success.hbs -->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update Success</title>
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <h1>Update Successful!</h1>
+    <p>The invoice has been updated with the following values:</p>
+
+    <ul>
+      <li><strong>Invoice ID:</strong>
+        {{getProperty updatedInvoice "Invoice ID"}}</li>
+      <li><strong>Customer Type:</strong>
+        {{getProperty updatedInvoice "Customer type"}}</li>
+      <li><strong>Unit Price:</strong>
+        {{getProperty updatedInvoice "Unit price"}}</li>
+      <!-- Add other fields as needed -->
+    </ul>
+  </body>
+</html>
