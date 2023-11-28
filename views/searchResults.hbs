@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <title>Search Results</title>
+    <style>
+      body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
+      h1 { text-align: center; } table { width: 100%; border-collapse: collapse;
+      margin-top: 20px; } th, td { border: 1px solid #ddd; padding: 8px;
+      text-align: left; } th { background-color: #f2f2f2; } tbody
+      tr:nth-child(even) { background-color: #f9f9f9; } img { max-width: 100px;
+      max-height: 100px; } strong { margin-right: 5px; font-weight: bold; } p {
+      text-align: center; }
+    </style>
+  </head>
+  <body>
+    <h1>Search Results</h1>
+    <div>
+      {{#if searchResult.length}}
+        <table>
+          <thead>
+            <tr>
+              <th>Invoice ID</th>
+              <th>Branch</th>
+              <th>City</th>
+
+              <th>Image</th>
+              <th>Quantity</th>
+              <th>Total</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Payment</th>
+              <th>COGS</th>
+              <th>Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each searchResult}}
+              <tr>
+                <td>{{getProperty this "Invoice ID"}}</td>
+                <td>{{getProperty this "Branch"}}</td>
+                <td>{{getProperty this "City"}}</td>
+                <td>
+                  <img
+                    src="{{getProperty this 'image'}}"
+                    alt="{{getProperty this 'name'}}"
+                    onerror="this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAA8FBMVEUAAACo7f3////c3Nzppkj29vaL1N7QiEBZYGCwsLDl5eUaGhqh4/I4VVni4uKR2eS+vr5+fn7Ly8twcHCv9/9JaG+b2unxrEtJT0+t9P8uLi5TWlqKw9AkMzc1S1AMERKTz91DX2Xt7e2Fy9TT09M7KhKWlpY6Ojqvr6/Zm0ONjY0QFxhwnqljjJVRcnpqamofHx9POBiFXyllSB/AiTtFMRV8r7uvfTZafoeBtsIjMTQqHg2ecDFCQkJvTyLJjz4tP0MZEgjhnEWzdTe0/v+ecTGUlJQYEQgtIA18WCa0gDdsTSJePR3GgT2PXix0o67UpzfjAAAN4UlEQVR4nO2de0PaSBfGA4FWUszLTTGigiwiXrHaWrS10tu22+1uv/+3eYM5Zy6ZCbkwM4Cb5y9Dkpn5ZS7nzJmJsYrPXdayC6BdOeH6Kydcf+WE66+ccP1lmHBQqVQGZrM0SdivW4HqfYO5GiSsWFQjc9maIxxarIbG8jVGWLN41UxlbIqwb4XVN5SzKcKmQNg0lLMhwgZyHV0f4Z8NM1kbIrwCqut2u/0B/r4yk7UZwj8B6nW7VCq1X8PRn0byNkLoYMM8Kc10goeuicyNEHZIG30ibF/DccdE5iYI0Zl5X0K9h18qBnI3QFh+BTw/2wDY/gm/dMv6s5cTOo2aOqEpvGmTOmzfoFFUmE/DSUrYaHYF86xCJyWqk/jLM6jblNhYgbCyqyVzy/rQZgjb3zTlsit07RCh/aApZ+uIBfQRj+JvyaYHex7hSFe2lvVY4vWoL6tRNOGpvlz/aocI23/py+w0inAYf29WvS+Jeh9/W1YN5YTsHHV3o6lCY0zvXbgK/Up8hyfHSvLaYIfImoyQmaPWG7arQiT09FoEZDzwel9JbnajThH6EkIyR23arq1ELmkVJxJAxijWVGVoUwiR0MZzp46a7Hyh6fkgq0K/EnGm+KAsR4cMlrZAiDV8quh5+k8UR64jKd9MaBSH6jJFxHqYsAwndpTlZQ/wcb6RV6FfiW';
+                                   this.alt='Image Error'"
+                  />
+                </td>
+                <td>{{getProperty this "Quantity"}}</td>
+                <td>{{getProperty this "Total"}}</td>
+                <td>{{getProperty this "Date"}}</td>
+                <td>{{getProperty this "Time"}}</td>
+                <td>{{getProperty this "Payment"}}</td>
+                <td>{{getProperty this "COGS"}}</td>
+                <td>{{getProperty this "Rating"}}</td>
+              </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      {{else}}
+        <p>No results found for the provided Invoice ID.</p>
+      {{/if}}
+    </div>
+  </body>
+</html>
+
+{{! /**********************************************************************************
+ * ITE5315 – Assignment 2* I declare that this assignment is my own work in accordance with Humber Academic Policy.
+ * * No part of this assignment has been copied manually or electronically from any other source* (including web sites) or distributed to other students.
+ * ** Name: killada chandrika venu
+ *  Student ID: N01536668
+ * Date: 26th november
+ * **********************************************************************************/ }}

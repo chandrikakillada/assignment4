@@ -74,11 +74,18 @@ app.get("/searchInvoice", async (req, res) => {
 });
 
 // Search single invoice
+// Search single invoice
 app.post("/searchInvoice", async (req, res) => {
   const { invoiceID } = req.body;
-  const a = await sales.find({ "Invoice ID": invoiceID });
 
-  res.json(a);
+  try {
+    const searchResult = await sales.find({ "Invoice ID": invoiceID });
+
+    res.render("searchResults", { searchResult });
+  } catch (error) {
+    console.error("Error searching invoice:", error);
+    res.status(500).send("Error searching invoice");
+  }
 });
 
 // display form to add new invoice

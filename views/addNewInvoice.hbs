@@ -52,73 +52,76 @@
           placeholder="XXX-XX-XXXX"
           required
         />
-        <label for="branch">Branch:</label>
-        <select id="branch" name="Branch" required>
+            <fieldset>
+        <legend>Product Information</legend>
 
-          <option value="A">A</option>
-          <option value="B">B</option>
-          <option value="C">C</option>
-        </select>
-
-        <label for="city">City:</label>
-        <input type="text" id="city" name="City" required />
-
-        <label for="rating">Rating:</label>
+        <!-- Product Name -->
+        <label for="name">Product Name:</label>
         <input
-          type="number"
-          step="0.1"
-          id="rating"
-          name="Rating"
-          min="1"
-          max="10"
+          type="text"
+          id="name"
+          name="name"
+          value="Sample Product"
           required
         />
-        <legend>Product Information</legend>
-        <label for="name">Product Name:</label>
-        <input type="text" id="name" name="name" required />
 
+        <!-- Image URL -->
         <label for="image">Image URL:</label>
-        <input type="text" id="image" name="image" required />
+        <input
+          type="text"
+          id="image"
+          name="image"
+          value="https://cdn11.bigcommerce.com/s-37777/images/stencil/2000x2000/products/868/5566/numatic_het200_hetty_vacuum_cleaner__96442.1486485783.jpg?c=2"
+          required
+        />
 
+        <!-- Unit Price -->
         <label for="unitPrice">Unit Price:</label>
         <input
           type="number"
           step="0.01"
           id="unitPrice"
           name="Unit Price"
+          value="25.99"
           required
-          value=""
           oninput="calculateTotal()"
         />
 
+        <!-- Quantity -->
         <label for="quantity">Quantity:</label>
         <input
           type="number"
           id="quantity"
           name="Quantity"
+          value="3"
           required
           oninput="calculateTotal()"
         />
 
+        <!-- Tax -->
         <label for="tax">Tax 5%:</label>
         <input
           type="number"
           step="0.01"
           id="tax"
           name="Tax 5%"
-          value=""
+          value="1.30"
           required
         />
 
+        <!-- Total -->
         <label for="total">Total:</label>
-        <input type="text" id="total" name="Total" value="" readonly />
+        <input type="text" id="total" name="Total" value="79.17" readonly />
 
+        <!-- Date -->
         <label for="date">Date:</label>
-        <input type="date" id="date" name="Date" required value="2019-02-16" />
+        <input type="date" id="date" name="Date" required value="2023-11-27" />
 
+        <!-- Time -->
         <label for="time">Time:</label>
-        <input type="time" id="time" name="Time" required value="10:00" />
+        <input type="time" id="time" name="Time" required value="14:30" />
       </fieldset>
+
 
       <button type="submit">Submit</button>
     </form>
